@@ -18,17 +18,21 @@ module.exports = {
     },
     ecmaVersion: "latest",
     sourceType: "module",
-    project: "./tsconfig.node.json",
+    project: "./tsconfig.json",
   },
   plugins: ["import", "react", "@typescript-eslint", "tailwindcss", "prettier"],
   rules: {
+		"import/prefer-default-export": "off",
+
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": [1, { extensions: [".tsx", ".jsx"] }],
+		"react/require-default-props": "off",
 
     "tailwindcss/no-custom-classname": "off",
   },
   ignorePatterns: [
     "node_modules",
-    ".eslintrc.js"
+    ".eslintrc.js",
+    "vite.config.ts"
   ],
 };
