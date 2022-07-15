@@ -1,5 +1,12 @@
+import { BrowserRouter } from "react-router-dom";
+import RootRouter from "./pages/Router";
+
 function App() {
-  return <div className="App text-cyan-700">hello</div>;
+  return (
+    <BrowserRouter>
+      <RootRouter />
+    </BrowserRouter>
+  );
 }
 
 export default App;
