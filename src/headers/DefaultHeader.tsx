@@ -1,12 +1,6 @@
-import Header from "../components/headers/Header";
+import Header from "components/header/Header";
+import { defaultLinks } from "utils/constants/pageLinks";
 
 export default function DefaultHeader() {
-  return (
-    <Header
-      links={[
-        { title: "overview", url: "" },
-        { title: "test", url: "/test" },
-      ]}
-    />
-  );
+  return <Header links={defaultLinks} />;
 }
